@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import SearchBar from "./SearchBar";
+
 import TaskList from "./TaskList";
 function App() {
   return (
@@ -8,8 +8,7 @@ function App() {
       <header className="App-header fixed-top">
         <h1 className="mt-2">MyTo Do</h1>
       </header>
-      <SearchBar />
-      <TaskList />
+      <TaskList className="mt-5" />
       <footer>
         <p>
           This Web App was built by <a href="">Fasika Belayneh</a> and is

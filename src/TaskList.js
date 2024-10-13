@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-
+import { IonIcon } from "@ionic/react";
+import { trashOutline } from "ionicons/icons";
 import SearchBar from "./SearchBar";
+import "./TaskList.css";
 export default function TaskList() {
   let [tasks, setTasks] = useState([]);
   function addTask(searchTerm) {
@@ -17,11 +19,15 @@ export default function TaskList() {
   return (
     <div className="TaskList">
       <SearchBar addTask={addTask} />
-      <ul>
+      <ul className="viewTask">
         {tasks.map((task) => (
-          <li key={task.id}>
-            {task.text}
-            <button onClick={() => delateTask(task.id)}>Delate</button>
+          <li key={task.id} className="eachList">
+            <div className="innerText">
+              {task.text}
+              <button onClick={() => delateTask(task.id)}>
+                <IonIcon icon={trashOutline} />
+              </button>
+            </div>
           </li>
         ))}
       </ul>

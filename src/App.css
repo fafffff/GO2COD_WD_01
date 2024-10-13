@@ -16,7 +16,9 @@
   border-radius: 5px;
   background-color: #000000;
 }
-
+footer {
+  margin-top: 600px;
+}
 .App-link {
   color: #61dafb;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import SearchBar from "./SearchBar";
-
+import TaskList from "./TaskList";
 function App() {
   return (
     <div className="App">
@@ -9,6 +9,7 @@ function App() {
         <h1 className="mt-2">MyTo Do</h1>
       </header>
       <SearchBar />
+      <TaskList />
       <footer>
         <p>
           This Web App was built by <a href="">Fasika Belayneh</a> and is

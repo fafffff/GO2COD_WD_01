@@ -3,6 +3,7 @@ import "./App.css";
 
 import TaskList from "./TaskList";
 function App() {
+  console.log("App component is rendering");
   return (
     <div className="App">
       <header className="App-header fixed-top">

@@ -14,8 +14,9 @@ function App() {
 
       <footer>
         <p>
-          This Web App was built by <a href="">Fasika Belayneh</a> and is
-          hoisted on <a href="">Netlify.</a>
+          This Web App was built by{" "}
+          <a href="https://github.com/fafffff">Fasika Belayneh</a> and is
+          hoisted on <a href="https://www.netlify.com/">Netlify.</a>
         </p>
       </footer>
     </div>

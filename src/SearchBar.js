@@ -29,9 +29,9 @@ export default function SearchBar({ addTask }) {
             value={searchTerm}
           />
           <input
-            type="datetime-local" // Input type for date and time
+            type="datetime-local"
             className="typeDeadline"
-            onChange={(e) => setDeadline(e.target.value)} // Update the deadline state
+            onChange={(e) => setDeadline(e.target.value)}
             value={deadline}
           />
           <button type="submit" className="submitTask">

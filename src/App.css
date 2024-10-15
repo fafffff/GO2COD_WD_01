@@ -1,24 +1,73 @@
 .App {
   text-align: center;
-  background-color: #454546;
   color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 .App-header {
-  min-height: 200;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  font-family: "Courgette", cursive;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 5px;
   font-size: calc(10px + 2vmin);
   color: goldenrod;
-
-  border-radius: 5px;
   background-color: #000000;
 }
+
 footer {
-  margin-top: 600px;
+  background-color: #000000;
+  padding: 80px 30px;
+  color: rgb(121, 90, 11);
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
 }
+
+footer a {
+  color: #594ef1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 .App-link {
-  color: #61dafb;
+  color: #0906b8;
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(12px + 2vmin);
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .App-header {
+    font-size: calc(10px + 2vmin);
+    padding: 8px;
+  }
+
+  .App {
+    padding: 0 15px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
 }

@@ -1,32 +1,40 @@
 import React, { useState } from "react";
-
 import "./SearchBar.css";
+
 export default function SearchBar({ addTask }) {
-  let [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [deadline, setDeadline] = useState("");
+
   function handleSubmit(event) {
     event.preventDefault();
-    if (searchTerm.trim() === "") {
-      alert("please Enter a task");
+    if (searchTerm.trim() === "" || deadline === "") {
+      alert("Please enter a task and select a deadline.");
+      return;
     }
-    addTask(searchTerm);
+    addTask(searchTerm, deadline);
     setSearchTerm("");
+    setDeadline("");
   }
-  function handleTask(event) {
-    setSearchTerm(event.target.value);
-  }
+
   return (
     <div className="SearchBar mt-5 pt-5">
-      <form className="addTask " onSubmit={handleSubmit}>
+      <form className="addTask" onSubmit={handleSubmit}>
         <div className="taskForm">
           <input
-            type="search"
+            type="text"
             placeholder="What do you need to do?"
-            autoFocus="on"
+            autoFocus
             className="typeTask"
-            onChange={handleTask}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
           />
-
-          <button type="search" className="submitTask ">
+          <input
+            type="datetime-local" // Input type for date and time
+            className="typeDeadline"
+            onChange={(e) => setDeadline(e.target.value)} // Update the deadline state
+            value={deadline}
+          />
+          <button type="submit" className="submitTask">
             ADD
           </button>
         </div>

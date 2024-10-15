@@ -1,34 +1,138 @@
 .SearchBar {
   text-align: center;
-  height: 100px;
+  padding: 20px 0;
+  background-color: #454546;
+  margin-bottom: 20px;
+}
+
+.night-mode .SearchBar {
+  background-color: #1c1c1e;
 }
 
 .typeTask {
-  width: 700px;
-  padding: 20px;
-  background-color: rgb(103, 103, 104);
-  border: 1px solid white;
-  border-right: 1px solid rgb(103, 103, 104);
-  color: goldenrod;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  box-shadow: 5px 5px 5px rgba(219, 218, 218, 0.1);
+  width: 60%;
+  max-width: 700px;
+  padding: 15px;
+  background-color: #3a3a3b;
+  border: none;
+  color: #ffdd57;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
+
+.night-mode .typeTask {
+  background-color: #444;
+}
+
+.typeTask:focus {
+  outline: none;
+  border: 1px solid #ffdd57;
+  background-color: #3a3a3b;
+}
+
+.night-mode .typeTask:focus {
+  background-color: #444;
+}
+
 input::placeholder {
-  color: goldenrod;
-  text-align: start;
-  font-size: 20px;
-  margin: 0 auto;
-  padding-left: 0;
+  color: #ffdd57;
+  opacity: 0.7;
+  font-size: 16px;
 }
+
+.typeDeadline {
+  background-color: #454546;
+  color: #ffdd57;
+  border: none;
+  padding: 15px;
+  width: 20%;
+  max-width: 230px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.night-mode .typeDeadline {
+  background-color: #333;
+}
+
+.typeDeadline:focus {
+  outline: none;
+  border: 1px solid #ffdd57;
+  background-color: #3a3a3b;
+}
+
+.night-mode .typeDeadline:focus {
+  background-color: #444;
+}
+
 .submitTask {
-  padding: 20px 50px;
-  background-color: rgb(103, 103, 104);
-  border: 1px solid white;
+  padding: 15px 40px;
+  background-color: #f0cd43;
+  border: none;
+  color: #2c2c2e;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.night-mode .submitTask {
+  background-color: #777;
   color: white;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-left: 1px solid rgb(103, 103, 104);
-  background-color: rgba(218, 165, 32, 0.8);
-  box-shadow: 5px 5px 5px rgba(218, 215, 215, 0.1);
+}
+
+.submitTask:hover {
+  background-color: #ffc107;
+  transform: translateY(-2px);
+}
+
+.night-mode .submitTask:hover {
+  background-color: #b98c04;
+}
+
+@media screen and (max-width: 1024px) {
+  .typeTask {
+    width: 55%;
+  }
+
+  .typeDeadline {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .typeTask,
+  .typeDeadline,
+  .submitTask {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 12px;
+  }
+
+  .typeTask {
+    border-radius: 30px;
+  }
+
+  .typeDeadline {
+    border-radius: 30px;
+  }
+
+  .submitTask {
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .typeTask,
+  .typeDeadline,
+  .submitTask {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .submitTask {
+    padding: 10px 30px;
+  }
 }
